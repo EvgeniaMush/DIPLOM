@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="QR_Code_Scanner.MainPage"
+             BackgroundImage="b.png">
+    <StackLayout>
+        
+        <ScrollView Orientation="Horizontal" HeightRequest="550">
+            <StackLayout   Spacing="3"   >
+                
+                <Label Text="Результат сканирования" x:Name="mycode" TextColor="Black"  FontSize="20" HorizontalOptions="Center"  />
+                
+
+            </StackLayout >
+        </ScrollView>
+
+        <!--<ProgressBar x:Name ="pb_ProgressBar"  IsVisible="False" Progress = "0.2"  Grid.Row = "2" ></ProgressBar>-->
+        
+        <AbsoluteLayout HorizontalOptions="Center">
+            
+            <StackLayout Orientation="Horizontal" Spacing="3" HorizontalOptions="Fill" Margin="5, 0, 5, 0 ">
+                
+                    <Button Text="Поверка"
+                    x:Name ="btninsert"
+                            BorderRadius="10"
+                             FontSize="14"
+                            FontFamily="Calibri"
+                    Clicked = "BtnInsert_Clicked"
+                            BackgroundColor="Cyan"   
+                            Margin="5, 0, 5, 5"
+                            IsVisible="False"
+                     />
+                
+                <Button Text = "Сканировать"   
+                        x:Name = "btnScan"  
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        BorderRadius="10"
+                        Clicked = "btnScan_Clicked"
+                        BackgroundColor="Orange"   
+                        Margin="5, 0, 5, 5"                       
+                                            
+                    />
+
+                <Button Text="   Списать   " 
+                      BackgroundColor="Cyan"      
+                      x:Name = "btnDel"
+                        FontSize="14"
+                        BorderRadius="10"
+                      Clicked = "btnDel_Clicked"
+                        IsVisible="False"
+                       Margin="5, 0, 5, 5"/>
+            </StackLayout>
+        </AbsoluteLayout>
+        <StackLayout  Spacing="3" >
+            <Button x:Name="clear" Text="Очистить" Clicked="Btnc_clear" ImageSource="d.png" IsVisible="False"/>
+        </StackLayout>
+    </StackLayout>
+
+   
+</ContentPage>
