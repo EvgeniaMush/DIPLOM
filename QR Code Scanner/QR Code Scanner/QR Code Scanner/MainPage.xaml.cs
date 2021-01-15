@@ -271,14 +271,13 @@ namespace QR_Code_Scanner
             //определяем тип SQLCommand=StoredProcedure
             cmd.CommandType = CommandType.StoredProcedure;
             //определяем имя вызываемой процедуры
-            cmd.CommandText = "[del]";
+            cmd.CommandText = "[delle]";
             //создаем параметр
             cmd.Parameters.Add("@id_m", SqlDbType.Int, 50);
             //задаем значение параметра
             cmd.Parameters["@id_m"].Value = item;
             
-            ;
-
+            
             cmd.ExecuteNonQuery();
             DisplayAlert("Уведомление", "Списание прошло успешно!", "ОK");
 

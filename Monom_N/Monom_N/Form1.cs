@@ -180,16 +180,16 @@ namespace Monom_N
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            string table = comboBox1.SelectedValue.ToString();
-            SqlDataReader sqlReader = null;
-            // SqlCommand command = new SqlCommand("SELECT * FROM tr4", sqlConnection);
-            string sql = "SELECT list_m.id_m AS ID, list_m.inv_n AS Номер, list_m.diam AS диаметр, list_m.ed_izm AS измерение, list_m.davlen AS давление, list_m.klass_t AS класс, list_m.data_p AS поверка " + 
-             " FROM list_m INNER JOIN list_tr ON list_m.id_tr = list_tr.id_tr" + " WHERE list_m.id_tr= " + table;
-            //string sql = "SELECT list_m.id_m AS ID, list_m.inv_n AS Номер, list_m.diam AS диаметр, list_m.ed_izm AS измерение, list_m.davlen AS давление, list_m.klass_t AS класс, list_m.data_p AS поверка, list_m.id_tr" +
-           // " FROM list_m ORDER BY id_m ";
-            // MessageBox.Show(sql);
-            conn(ConnectionString, sql, dataGridView1);
-            int totalWidth = 0;
+           // string table = comboBox1.SelectedValue.ToString();
+           // SqlDataReader sqlReader = null;
+           // // SqlCommand command = new SqlCommand("SELECT * FROM tr4", sqlConnection);
+           // string sql = "SELECT list_m.id_m AS ID, list_m.inv_n AS Номер, list_m.diam AS диаметр, list_m.ed_izm AS измерение, list_m.davlen AS давление, list_m.klass_t AS класс, list_m.data_p AS поверка " + 
+           //  " FROM list_m INNER JOIN list_tr ON list_m.id_tr = list_tr.id_tr" + " WHERE list_m.id_tr= " + table;
+           // //string sql = "SELECT list_m.id_m AS ID, list_m.inv_n AS Номер, list_m.diam AS диаметр, list_m.ed_izm AS измерение, list_m.davlen AS давление, list_m.klass_t AS класс, list_m.data_p AS поверка, list_m.id_tr" +
+           //// " FROM list_m ORDER BY id_m ";
+           // // MessageBox.Show(sql);
+           // conn(ConnectionString, sql, dataGridView1);
+           // int totalWidth = 0;
 
            
         }
@@ -257,16 +257,17 @@ namespace Monom_N
                 //присовение переменной значения ID
                 int id_m = Convert.ToInt32(cmd.Parameters["@id_m"].Value);
                   
-                MessageBox.Show("Изменения внесены. ID= " + id_m.ToString(), "Добавление записей");
+                MessageBox.Show("Манометр добавлен!  ID= " + id_m.ToString(), "Добавление записей");
                 textQRcode.Text = id_m.ToString();
                 pic.Image = null;
-                
-                                             
-               // toolStripProgressBar1.Value = 100;
-               // toolStripStatusLabel1.Text = "Добавлено!";           
 
-           // conn4(ConnectionString, sql, dataGridView2);
+
+            // toolStripProgressBar1.Value = 100;
+            // toolStripStatusLabel1.Text = "Добавлено!";           
+
+            // conn4(ConnectionString, sql, dataGridView2);
             
+
             conn.Close();
 
            
@@ -581,7 +582,7 @@ namespace Monom_N
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            //Открываем Excel
             Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
             ExcelApp.Application.Workbooks.Add(Type.Missing);
             ExcelApp.Columns.ColumnWidth = 15;
@@ -689,6 +690,20 @@ namespace Monom_N
             // " FROM list_m INNER JOIN list_tr ON list_m.id_tr = list_tr.id_tr" + " WHERE list_m.id_tr= " + table;
             //// MessageBox.Show(sql);
             //conn(ConnectionString, sql, dataGridView1);
+        }
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string table = comboBox1.SelectedValue.ToString();
+            SqlDataReader sqlReader = null;
+            // SqlCommand command = new SqlCommand("SELECT * FROM tr4", sqlConnection);
+            string sql = "SELECT list_m.id_m AS ID, list_m.inv_n AS Номер, list_m.diam AS диаметр, list_m.ed_izm AS измерение, list_m.davlen AS давление, list_m.klass_t AS класс, list_m.data_p AS поверка " +
+             " FROM list_m INNER JOIN list_tr ON list_m.id_tr = list_tr.id_tr" + " WHERE list_m.id_tr= " + table;
+            //string sql = "SELECT list_m.id_m AS ID, list_m.inv_n AS Номер, list_m.diam AS диаметр, list_m.ed_izm AS измерение, list_m.davlen AS давление, list_m.klass_t AS класс, list_m.data_p AS поверка, list_m.id_tr" +
+            // " FROM list_m ORDER BY id_m ";
+            // MessageBox.Show(sql);
+            conn(ConnectionString, sql, dataGridView1);
+            int totalWidth = 0;
         }
     }
 }

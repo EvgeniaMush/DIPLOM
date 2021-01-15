@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fnaim));
             this.manomDataSet = new Monom_N.manomDataSet();
             this.listtrBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.list_trTableAdapter = new Monom_N.manomDataSetTableAdapters.list_trTableAdapter();
@@ -186,12 +187,10 @@
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Cornsilk;
             this.groupBox4.Controls.Add(this.progressBar1);
-            this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox4.Location = new System.Drawing.Point(3, 395);
+            this.groupBox4.Location = new System.Drawing.Point(3, 436);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1435, 71);
+            this.groupBox4.Size = new System.Drawing.Size(1435, 30);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             // 
@@ -204,9 +203,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1062, 29);
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(6, 356);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(368, 39);
+            this.button5.Size = new System.Drawing.Size(368, 71);
             this.button5.TabIndex = 4;
             this.button5.Text = "Печать";
             this.button5.UseVisualStyleBackColor = true;
@@ -214,23 +214,26 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(-3, 29);
+            this.button1.Location = new System.Drawing.Point(86, 43);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(373, 49);
+            this.button1.Size = new System.Drawing.Size(196, 31);
             this.button1.TabIndex = 3;
             this.button1.Text = "Показать";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Cornsilk;
             this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(1065, 3);
+            this.groupBox2.Location = new System.Drawing.Point(1050, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(373, 463);
+            this.groupBox2.Size = new System.Drawing.Size(388, 463);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Выбор теплового района";
@@ -238,7 +241,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(71, 286);
+            this.button8.Location = new System.Drawing.Point(71, 226);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(225, 83);
             this.button8.TabIndex = 8;
@@ -265,6 +268,7 @@
             this.comboBox1.Size = new System.Drawing.Size(225, 24);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // dataGridView1
             // 
@@ -275,7 +279,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1056, 399);
+            this.dataGridView1.Size = new System.Drawing.Size(1036, 427);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -311,6 +315,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Cornsilk;
             this.groupBox3.Controls.Add(this.comboBox2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.textBox1);
@@ -407,11 +412,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(101, 279);
+            this.label7.Location = new System.Drawing.Point(90, 279);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 17);
+            this.label7.Size = new System.Drawing.Size(129, 17);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Дата поверки";
+            this.label7.Text = "Дата регистрации";
             // 
             // comboBox3
             // 
@@ -476,6 +481,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Cornsilk;
             this.groupBox1.Controls.Add(this.pic);
             this.groupBox1.Controls.Add(this.btnGenerate);
             this.groupBox1.Controls.Add(this.button4);
@@ -490,7 +496,7 @@
             // 
             // pic
             // 
-            this.pic.BackColor = System.Drawing.Color.White;
+            this.pic.BackColor = System.Drawing.Color.Cornsilk;
             this.pic.Location = new System.Drawing.Point(18, 59);
             this.pic.Name = "pic";
             this.pic.Size = new System.Drawing.Size(314, 205);
@@ -500,7 +506,7 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(178, 294);
+            this.btnGenerate.Location = new System.Drawing.Point(180, 294);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(158, 60);
             this.btnGenerate.TabIndex = 19;
@@ -510,7 +516,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(18, 379);
+            this.button4.Location = new System.Drawing.Point(18, 360);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(320, 56);
             this.button4.TabIndex = 21;
@@ -558,6 +564,7 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -614,6 +621,7 @@
             this.ClientSize = new System.Drawing.Size(1449, 522);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Fnaim";
             this.Text = "Новочеркасск";
