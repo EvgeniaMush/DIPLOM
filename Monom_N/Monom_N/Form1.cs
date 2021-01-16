@@ -20,24 +20,45 @@ using Tulpep.NotificationWindow;
 using System.Threading;
 using System.Timers;
 using System.Net;
+using System.Net.NetworkInformation;
 
 namespace Monom_N
 {
     public partial class Fnaim : Form
     {
         private PopupNotifier popup = null;
-      
+        //имя хоста
+        static string hostname;
+        //статус пинга
+        static bool PingStatus = false;
+        static void GetPing()
+        {
+            PingStatus = false;
+            try
+            {
+                Ping p = new Ping();
+                PingReply Status = p.Send(hostname, 1);
+                PingStatus = Status.Status == IPStatus.Success;
+            }
+            catch
+            {
+
+            }
+        }
+
         SqlConnection sqlConnection;
         String ConnectionString;
         public Fnaim()
         {
             InitializeComponent();
 
-            try
-            {
-                
-                using (var client = new WebClient())
-                using (client.OpenRead("http://google.com/generate_204")) ;
+            hostname = "ya.ru";
+            GetPing();
+            if (PingStatus == true)
+            { 
+
+            using (var client = new WebClient())
+                using (client.OpenRead("http://google.com/generate_204"));
 
 
                 //Создание конфиг. менеджера для работы с настройками подключения
@@ -63,7 +84,7 @@ namespace Monom_N
                 comboBox4.Items.Add("2,5");
 
             }
-            catch
+            else
             {
 
 

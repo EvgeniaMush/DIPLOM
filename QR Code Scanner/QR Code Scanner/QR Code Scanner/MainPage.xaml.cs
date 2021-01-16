@@ -144,7 +144,7 @@ namespace QR_Code_Scanner
             DataSet dsReport = new DataSet();           
             ReportAdapter.Fill(dsReport); //  , "Report"
 
-            string result = "№ ТР   |   Инв. №   |  Давление  ";
+            string result = "№    | № ТР    |   Инв. №   |  Давление  ";
 
 
             for (int i = 0; i < dsReport.Tables[0].Rows.Count; i++)
@@ -154,7 +154,7 @@ namespace QR_Code_Scanner
                 string id_tr = dsReport.Tables[0].Rows[i]["id_tr"].ToString();
                 string ed_izm = dsReport.Tables[0].Rows[i]["ed_izm"].ToString();
 
-                result += $"\n     {id_tr}      |   {inv_n}      |       {davlen} {ed_izm}";
+                result += $"\n    { (i+1).ToString() }  |  {id_tr}         |   {inv_n}       |       {davlen} {ed_izm}";
             }
 
             return result;

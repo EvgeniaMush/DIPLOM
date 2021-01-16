@@ -25,7 +25,6 @@ D:\diplom\Diplom_Git\Monom_N\Monom_N\bin\Debug\QRCoder.dll
 D:\diplom\Diplom_Git\Monom_N\Monom_N\bin\Debug\System.Drawing.Common.dll
 D:\diplom\Diplom_Git\Monom_N\Monom_N\bin\Debug\Tulpep.NotificationWindow.dll
 D:\diplom\Diplom_Git\Monom_N\Monom_N\bin\Debug\IronBarCode.xml
-D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.csprojAssemblyReference.cache
 D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.csproj.ResolveComReference.cache
 D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.Fnaim.resources
 D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.Properties.Resources.resources
@@ -33,3 +32,7 @@ D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.csproj.GenerateResource.c
 D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.csproj.CopyComplete
 D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.exe
 D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.pdb
+D:\diplom\Diplom_Git\Monom_N\Monom_N\bin\Debug\Monom_N.exe.manifest
+D:\diplom\Diplom_Git\Monom_N\Monom_N\bin\Debug\Monom_N.application
+D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.exe.manifest
+D:\diplom\Diplom_Git\Monom_N\Monom_N\obj\Debug\Monom_N.application
